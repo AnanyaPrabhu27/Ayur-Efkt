@@ -2,10 +2,18 @@
 
 A full-stack e-commerce website for **Ayur Efkt**, an Ayurvedic skincare brand.
 
+<p align="center">
+  <a href="https://ayur-efkt.onrender.com/" target="_blank">
+    <img src="https://img.shields.io/badge/LIVE%20DEMO-Click%20Here-brightgreen?style=for-the-badge" alt="Live Demo"/>
+  </a>
+</p>
+
 ## Tech Stack
 - **Frontend**: Vanilla HTML, CSS, JavaScript (canvas animations)
 - **Backend**: Node.js + Express
 - **Data Store**: JSON files (no database required)
+
+
 
 ## Project Structure
 ```
