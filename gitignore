@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Orders and reviews data (will be recreated)
+data/orders.json
+data/reviews.json
+
+# Windows stuff
+Thumbs.db
+desktop.ini
+
+# Mac stuff
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor folders
+.vscode/
+.idea/

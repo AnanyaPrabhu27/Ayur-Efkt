@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayur Efkt — Ayurvedic Skin Care</title>
+  <meta name="description" content="Pure Ayurvedic skincare crafted from nature's most potent herbs. Discover our Skin Glowing Serum and Face Gel." />
+  <link rel="stylesheet" href="/css/style.css" />
+  <!-- Favicon placeholder -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'></text></svg>">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════════════════════ -->
+<nav class="nav">
+  <a class="nav-logo" href="#home" onclick="navigate('home')">
+    <img src="/images/logo.png" alt="Ayur Efkt" style="height:48px;width:auto;object-fit:contain;">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home" onclick="navigate('home')">Home</a></li>
+    <li><a href="#shop" onclick="navigate('shop')">Shop</a></li>
+    <li><a href="#home" onclick="navigate('home'); setTimeout(()=>document.getElementById('about-section').scrollIntoView({behavior:'smooth'}),200)">About</a></li>
+    <li><a href="https://www.instagram.com/ayur_efkt/" target="_blank" rel="noopener">Instagram</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="nav-cart-btn" onclick="openCart()" aria-label="Cart">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <span class="cart-count" id="cart-badge">0</span>
+    </button>
+    <div class="hamburger" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
+  <a href="#home" onclick="navigate('home'); closeMobileMenu()">Home</a>
+  <a href="#shop" onclick="navigate('shop'); closeMobileMenu()">Shop</a>
+  <a href="https://www.instagram.com/ayur_efkt/" target="_blank" rel="noopener" onclick="closeMobileMenu()">Instagram</a>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     HOME PAGE
+═══════════════════════════════════════════════════════════ -->
+<div id="home-page" class="page">
+
+  <!-- Hero -->
+  <section class="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-tagline">Ancient Wisdom. Modern Skin.</p>
+      <h1 class="hero-title">
+        Nature's Most <em style="display:inline;">Precious Herbs</em><br>
+        for Your Skin
+      </h1>
+      <p class="hero-subtitle">
+        Handcrafted Ayurvedic formulas with saffron, sandalwood, and rare botanicals — designed to reveal the skin you were born with.
+      </p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="navigate('shop')">Shop Now</button>
+        <button class="btn-outline" onclick="document.getElementById('about-section').scrollIntoView({behavior:'smooth'})">Our Story</button>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>Saffron</span><span class="marquee-dot">✦</span>
+      <span>Sandalwood</span><span class="marquee-dot">✦</span>
+      <span>Manjishtha</span><span class="marquee-dot">✦</span>
+      <span>Nagkeshar</span><span class="marquee-dot">✦</span>
+      <span>Rose Petals</span><span class="marquee-dot">✦</span>
+      <span>Aloe Vera</span><span class="marquee-dot">✦</span>
+      <span>Jojoba Oil</span><span class="marquee-dot">✦</span>
+      <span>Ambe Halad</span><span class="marquee-dot">✦</span>
+      <span>Saffron</span><span class="marquee-dot">✦</span>
+      <span>Sandalwood</span><span class="marquee-dot">✦</span>
+      <span>Manjishtha</span><span class="marquee-dot">✦</span>
+      <span>Nagkeshar</span><span class="marquee-dot">✦</span>
+      <span>Rose Petals</span><span class="marquee-dot">✦</span>
+      <span>Aloe Vera</span><span class="marquee-dot">✦</span>
+      <span>Jojoba Oil</span><span class="marquee-dot">✦</span>
+      <span>Ambe Halad</span><span class="marquee-dot">✦</span>
+    </div>
+  </div>
+
+  <!-- Philosophy -->
+  <section class="section philosophy" id="about-section">
+    <div>
+      <p class="section-label">Our Philosophy</p>
+      <h2 class="section-title">Where Ancient <em>Ayurveda</em><br>Meets Modern Science</h2>
+      <p class="phil-body">
+        Every Ayur Efkt product is rooted in 5,000 years of Ayurvedic knowledge. We source the rarest botanicals — Saffron from Kashmir, Sandalwood from Karnataka, Rose petals from Pushkar — and combine them with cold-pressed carrier oils or pure Aloe Vera in small, handcrafted batches.
+      </p>
+      <div class="phil-stats">
+        <div>
+          <div class="phil-stat-num">9+</div>
+          <div class="phil-stat-label">Active Botanicals</div>
+        </div>
+        <div>
+          <div class="phil-stat-num">0</div>
+          <div class="phil-stat-label">Harmful Chemicals</div>
+        </div>
+        <div>
+          <div class="phil-stat-num">100%</div>
+          <div class="phil-stat-label">Natural Ingredients</div>
+        </div>
+      </div>
+    </div>
+    <div class="phil-right">
+      <div class="phil-card">
+        <div class="phil-card-icon"><img src="/images/nature.png" alt="Natural" style="width:40px;height:40px;object-fit:contain;"></div>
+        <div class="phil-card-title">100% Natural</div>
+        <div class="phil-card-text">No parabens, no sulfates, no artificial fragrance. Just pure botanical goodness.</div>
+      </div>
+      <div class="phil-card">
+        <div class="phil-card-icon"><img src="/images/handmade.png" alt="Handcrafted" style="width:40px;height:40px;object-fit:contain;"></div>
+        <div class="phil-card-title">Handcrafted</div>
+        <div class="phil-card-text">Small-batch production ensures every bottle receives the attention it deserves.</div>
+      </div>
+      <div class="phil-card">
+        <div class="phil-card-title">Traditional Formulas</div>
+        <div class="phil-card-text">Recipes inspired by classical Ayurvedic texts, adapted for modern skin.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="section" style="background: var(--cream);">
+    <p class="section-label">Our Collection</p>
+    <h2 class="section-title">The Ayur Efkt <em>Ritual</em></h2>
+    <div class="products-grid" id="products-grid"></div>
+    <div style="text-align:center; margin-top:3rem">
+      <button class="btn-outline" onclick="navigate('shop')">View All Products</button>
+    </div>
+  </section>
+
+  <!-- Key Ingredients -->
+<section class="section ingredients-section">
+  <p class="section-label">The Ingredients</p>
+  <h2 class="section-title">Nature's <em>Finest</em> Botanicals</h2>
+
+  <div class="ingredients-layout">
+
+    <!-- Featured: Saffron -->
+    <div class="ingredient-featured">
+      <img src="/images/saffron_thread.png" alt="Saffron" class="feat-img">
+      <div class="feat-name">केसर(Saffron)</div>
+      <div class="feat-latin">Crocus sativus</div>
+      <div class="feat-desc">Many names kesar, zafaraan, saffron but rich in crocin and safranal. These helpbrightens skin tone, reduces pigmentation, and gives Ayur Efkt its signature hero ingredient.</div>
+    </div>
+
+    <!-- Grid: rest of ingredients -->
+    <div class="ingredients-grid">
+      <div class="ingredient-item">
+        <div class="ingredient-icon"><img src="/images/sandalwood.png" alt="Sandalwood"></div>
+        <div class="ingredient-name">चंदन (Sandalwood)</div>
+        <div class="ingredient-latin">Santalum album</div>
+      </div>
+      <div class="ingredient-item">
+        <div class="ingredient-icon"><img src="/images/nagkesar.png" alt="Nagkeshar"></div>
+        <div class="ingredient-name">नागकेशर (Nagkeshar)</div>
+        <div class="ingredient-latin">Mesua ferrea</div>
+      </div>
+      <div class="ingredient-item">
+        <div class="ingredient-icon"><img src="/images/mulethi.png" alt="Yashtimadhu"></div>
+        <div class="ingredient-name">मुलेठी (Yashtimadhu)</div>
+        <div class="ingredient-latin">Glycyrrhiza glabra</div>
+      </div>
+      <div class="ingredient-item">
+        <div class="ingredient-icon"><img src="/images/rose.png" alt="Rose Petals"></div>
+        <div class="ingredient-name">गुलाब (Rose Petals)</div>
+        <div class="ingredient-latin">Rosa centifolia</div>
+      </div>
+      <div class="ingredient-item">
+        <div class="ingredient-icon"><img src="/images/orange_peel.png" alt="Orange Peel"></div>
+        <div class="ingredient-name">संतरे का छिलका (Orange Peel)</div>
+        <div class="ingredient-latin">Citrus aurantium</div>
+      </div>
+      <div class="ingredient-item">
+        <div class="ingredient-icon"><img src="/images/aloe_vera.png" alt="Aloe Vera"></div>
+        <div class="ingredient-name">एलोवेरा (Aloe Vera)</div>
+        <div class="ingredient-latin">Aloe barbadensis</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">
+          <img src="/images/logo.png" alt="Ayur Efkt" style="height:70px;width:auto;object-fit:contain;filter:brightness(1.15);">
+        </div>
+        <p class="footer-brand-text">Rooted in the ancient wisdom of Ayurveda, crafted for the modern skin. Pure, potent, and handmade with love.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/ayur_efkt/" target="_blank" rel="noopener" class="social-link">📸</a>
+          <a href="#" class="social-link">📘</a>
+          <a href="#" class="social-link">💬</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Shop</div>
+        <ul class="footer-links">
+          <li><a href="#" onclick="navigate('shop')">All Products</a></li>
+          <li><a href="#" onclick="navigate('product/ayurvedic-skin-glowing-serum')">Skin Serum</a></li>
+          <li><a href="#" onclick="navigate('product/ayurvedic-face-gel')">Face Gel</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Ingredients</a></li>
+          <li><a href="#">Sustainability</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Help</div>
+        <ul class="footer-links">
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Ayur Efkt. All rights reserved.</span>
+      <span>Made with 🌿 in India</span>
+    </div>
+  </footer>
+
+</div><!-- /home-page -->
+
+<!-- ══════════════════════════════════════════════════════════
+     SHOP PAGE
+═══════════════════════════════════════════════════════════ -->
+<div id="shop-page" class="page" style="padding-top:72px;">
+  <section class="section">
+    <p class="section-label">All Products</p>
+    <h2 class="section-title">The Ayur Efkt <em>Collection</em></h2>
+    <div class="products-grid" id="shop-grid"></div>
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PRODUCT DETAIL PAGE (rendered by JS)
+═══════════════════════════════════════════════════════════ -->
+<div id="product-page" class="page"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     CHECKOUT PAGE
+═══════════════════════════════════════════════════════════ -->
+<div id="checkout-page" class="page">
+  <div class="checkout-page">
+    <div class="checkout-inner">
+      <div>
+        <h2 class="checkout-title">Checkout</h2>
+
+        <div class="form-section">
+          <h3 class="form-section-title">Contact Information</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label">First Name *</label>
+              <input class="form-input" id="fname" type="text" placeholder="Priya" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Last Name *</label>
+              <input class="form-input" id="lname" type="text" placeholder="Sharma" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email *</label>
+              <input class="form-input" id="email" type="email" placeholder="priya@email.com" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone *</label>
+              <input class="form-input" id="phone" type="tel" placeholder="+91 9876543210" />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3 class="form-section-title">Shipping Address</h3>
+          <div class="form-grid">
+            <div class="form-group full">
+              <label class="form-label">Address Line *</label>
+              <input class="form-input" id="address" type="text" placeholder="Flat 4B, Rose Garden Apartments, MG Road" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">City *</label>
+              <input class="form-input" id="city" type="text" placeholder="Mumbai" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">State *</label>
+              <input class="form-input" id="state" type="text" placeholder="Maharashtra" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">PIN Code *</label>
+              <input class="form-input" id="pincode" type="text" placeholder="400001" />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3 class="form-section-title">Payment Method</h3>
+          <div class="payment-options">
+            <label class="payment-option">
+              <input type="radio" name="payment" value="COD" checked />
+              <div>
+                <div class="payment-option-label">💵 Cash on Delivery</div>
+                <div class="payment-option-desc">Pay when your order arrives</div>
+              </div>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment" value="UPI" />
+              <div>
+                <div class="payment-option-label">📱 UPI</div>
+                <div class="payment-option-desc">Pay via GPay, PhonePe, Paytm, or any UPI app</div>
+              </div>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment" value="Card" />
+              <div>
+                <div class="payment-option-label">💳 Credit / Debit Card</div>
+                <div class="payment-option-desc">Visa, Mastercard, RuPay accepted</div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Order Summary -->
+      <div>
+        <div class="order-summary-card">
+          <h3 class="order-summary-title">Order Summary</h3>
+          <div id="checkout-summary"></div>
+          <button class="btn-place-order" id="place-order-btn" onclick="placeOrder()">Place Order →</button>
+          <div class="secure-note">🔒 Secure & encrypted checkout</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     CONFIRM PAGE
+═══════════════════════════════════════════════════════════ -->
+<div id="confirm-page" class="page">
+  <div class="confirm-page">
+    <div class="confirm-card" id="confirm-content">
+      <!-- Filled by JS -->
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     CART DRAWER
+═══════════════════════════════════════════════════════════ -->
+<div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-header">
+    <h2>Your Cart</h2>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cart-items">
+    <div class="cart-empty">
+      <div class="cart-empty-icon">🛍️</div>
+      <p>Your cart is empty</p>
+    </div>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-subtotal">
+      <span>Subtotal</span>
+      <span id="cart-subtotal">₹0</span>
+    </div>
+    <div class="cart-subtotal">
+      <span>Shipping</span>
+      <span id="cart-shipping">₹60</span>
+    </div>
+    <div class="cart-total">
+      <span class="cart-total-label">Total</span>
+      <span class="cart-total-price" id="cart-grand">₹0</span>
+    </div>
+    <button class="btn-checkout" onclick="closeCart(); navigate('checkout')">Proceed to Checkout</button>
+    <div class="free-shipping-note" id="free-ship-note">Add ₹499 more for free shipping</div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script src="/js/falling.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>

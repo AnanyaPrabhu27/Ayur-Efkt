@@ -1,0 +1,60 @@
+[
+  {
+    "id": "prod-001",
+    "slug": "ayurvedic-skin-glowing-serum",
+    "name": "Ayurvedic Skin Glowing Serum",
+    "price": 349,
+    "originalPrice": 449,
+    "size": "15ml",
+    "type": "serum",
+    "badge": "Best Seller",
+    "stock": 50,
+    "description": "A luxurious amber dropper serum crafted from ancient Ayurvedic wisdom. Infused with saffron, sandalwood, and rare herbs to reveal your skin's natural radiance.",
+    "longDescription": "Our signature Ayurvedic Skin Glowing Serum is a concentrated blend of nature's most precious botanicals. Each drop delivers the power of Saffron (Kesar) combined with Sandalwood's cooling and brightening properties. The formula includes Manjishtha for deep depigmentation, Yashtimadhu for gentle skin lightening, and Nagkeshar for its antioxidant richness. Carrier oils of Olive, Almond, and Jojoba ensure deep penetration and lasting moisture.",
+    "ingredients": [
+      "Olive Oil",
+      "Almond Oil",
+      "Jojoba Oil",
+      "Saffron",
+      "Sandalwood (Santalum album)",
+      "Yashtimadher / Jeshtmadh",
+      "Manjeshtha (Rubra cardifolia)",
+      "Vekhand (Acorus calanus)",
+      "Lodhra (Symplocos racemosa)",
+      "Ambe Halad (Curcuma amada)",
+      "Nagkeshar (Mesua ferrea)",
+      "Rose petals (Rosa centifolia)",
+      "Orange peel (Citrus aurantium)"
+    ],
+    "benefits": ["Brightens skin tone", "Reduces pigmentation", "Deep hydration", "Anti-aging", "Natural glow"],
+    "howToUse": "Apply 3–4 drops on cleansed face and neck. Gently massage in circular motions. Use morning and night for best results."
+  },
+  {
+    "id": "prod-002",
+    "slug": "ayurvedic-face-gel",
+    "name": "Ayur Efkt Face Gel",
+    "price": 499,
+    "originalPrice": 599,
+    "size": "50ml",
+    "type": "gel",
+    "badge": "New",
+    "stock": 35,
+    "description": "A rich amber aloe vera gel infused with the same powerful Ayurvedic herbs as our serum. Deeply cooling, hydrating, and healing for all skin types.",
+    "longDescription": "The Ayur Efkt Face Gel harnesses the same potent Ayurvedic herb complex as our serum, now suspended in a pure Aloe Vera base instead of oils. This makes it ideal for oily, combination, and sensitive skin types. The gel texture absorbs instantly without any residue, delivering herbs like Saffron, Sandalwood, Manjishtha, and Nagkeshar deep into the skin. Perfect as a day moisturizer, under-makeup base, or soothing after-sun treatment.",
+    "ingredients": [
+      "Aloe Vera Gel (base)",
+      "Saffron",
+      "Sandalwood (Santalum album)",
+      "Yashtimadher / Jeshtmadh",
+      "Manjeshtha (Rubra cardifolia)",
+      "Vekhand (Acorus calanus)",
+      "Lodhra (Symplocos racemosa)",
+      "Ambe Halad (Curcuma amada)",
+      "Nagkeshar (Mesua ferrea)",
+      "Rose petals (Rosa centifolia)",
+      "Orange peel (Citrus aurantium)"
+    ],
+    "benefits": ["Lightweight hydration", "Oil control", "Cooling & soothing", "Brightening", "Suitable for all skin types"],
+    "howToUse": "Apply a generous layer on cleansed face and neck. Massage gently until fully absorbed. Use twice daily."
+  }
+]
