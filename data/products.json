@@ -3,8 +3,8 @@
     "id": "prod-001",
     "slug": "ayurvedic-skin-glowing-serum",
     "name": "Ayurvedic Skin Glowing Serum",
-    "price": 349,
-    "originalPrice": 449,
+    "price": 499,
+    "originalPrice": 599,
     "size": "15ml",
     "type": "serum",
     "badge": "Best Seller",
@@ -33,8 +33,8 @@
     "id": "prod-002",
     "slug": "ayurvedic-face-gel",
     "name": "Ayur Efkt Face Gel",
-    "price": 499,
-    "originalPrice": 599,
+    "price": 349,
+    "originalPrice": 449,
     "size": "50ml",
     "type": "gel",
     "badge": "New",
@@ -56,5 +56,23 @@
     ],
     "benefits": ["Lightweight hydration", "Oil control", "Cooling & soothing", "Brightening", "Suitable for all skin types"],
     "howToUse": "Apply a generous layer on cleansed face and neck. Massage gently until fully absorbed. Use twice daily."
-  }
+  },
+  {
+    "id": "prod-003",
+    "slug": "ayurefkt-skincare-combo",
+    "name": "Ayur Efkt Skincare Combo",
+    "price": 749,
+    "originalPrice": 849,
+    "size": "15ml + 50ml",
+    "type": "combo",
+    "badge": "Best Value",
+    "stock": 30,
+    "description": "Get the complete Ayur Efkt ritual — our Skin Glowing Serum and Face Gel together at a special price. The perfect day and night Ayurvedic skincare duo.",
+    "longDescription": "The Ayur Efkt Combo gives you the best of both worlds. Use the Face Gel as your lightweight daytime moisturizer and the Skin Glowing Serum at night for deep repair and radiance. Together they deliver the full spectrum of our 13 Ayurvedic botanicals — Saffron, Sandalwood, Manjishtha, Nagkeshar, Rose Petals, and more — for a complete skincare ritual that transforms your skin from within.",
+    "ingredients": ["Olive Oil", "Almond Oil", "Jojoba Oil", "Aloe Vera Gel (base)", "Saffron", "Sandalwood (Santalum album)", "Yashtimadher / Jeshtmadh", "Manjeshtha (Rubra cardifolia)", "Vekhand (Acorus calanus)", "Lodhra (Symplocos racemosa)", "Ambe Halad (Curcuma amada)", "Nagkeshar (Mesua ferrea)", "Rose petals (Rosa centifolia)", "Orange peel (Citrus aurantium)"],
+    "benefits": ["Complete day & night routine", "All 13 Ayurvedic botanicals", "Best value for money", "Brightening + Hydrating", "Suitable for all skin types"],
+    "howToUse": "Morning: Apply Face Gel on cleansed skin, massage until absorbed. Night: Apply 3-4 drops of Serum on cleansed face and neck, massage in circular motions.",
+    "rating": 5.0,
+    "reviewCount": 0
+  }  
 ]

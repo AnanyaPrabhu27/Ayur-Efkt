@@ -60,6 +60,7 @@
   <!-- Hero -->
   <section class="hero">
     <canvas id="hero-canvas"></canvas>
+    <div class="hero-overlay"></div>
     <div class="hero-content">
       <p class="hero-tagline">Ancient Wisdom. Modern Skin.</p>
       <h1 class="hero-title">
@@ -168,38 +169,53 @@
       <div class="feat-desc">Many names kesar, zafaraan, saffron but rich in crocin and safranal. These helpbrightens skin tone, reduces pigmentation, and gives Ayur Efkt its signature hero ingredient.</div>
     </div>
 
-    <!-- Grid: rest of ingredients -->
-    <div class="ingredients-grid">
-      <div class="ingredient-item">
-        <div class="ingredient-icon"><img src="/images/sandalwood.png" alt="Sandalwood"></div>
-        <div class="ingredient-name">चंदन (Sandalwood)</div>
-        <div class="ingredient-latin">Santalum album</div>
-      </div>
-      <div class="ingredient-item">
-        <div class="ingredient-icon"><img src="/images/nagkesar.png" alt="Nagkeshar"></div>
-        <div class="ingredient-name">नागकेशर (Nagkeshar)</div>
-        <div class="ingredient-latin">Mesua ferrea</div>
-      </div>
-      <div class="ingredient-item">
-        <div class="ingredient-icon"><img src="/images/mulethi.png" alt="Yashtimadhu"></div>
-        <div class="ingredient-name">मुलेठी (Yashtimadhu)</div>
-        <div class="ingredient-latin">Glycyrrhiza glabra</div>
-      </div>
-      <div class="ingredient-item">
-        <div class="ingredient-icon"><img src="/images/rose.png" alt="Rose Petals"></div>
-        <div class="ingredient-name">गुलाब (Rose Petals)</div>
-        <div class="ingredient-latin">Rosa centifolia</div>
-      </div>
-      <div class="ingredient-item">
-        <div class="ingredient-icon"><img src="/images/orange_peel.png" alt="Orange Peel"></div>
-        <div class="ingredient-name">संतरे का छिलका (Orange Peel)</div>
-        <div class="ingredient-latin">Citrus aurantium</div>
-      </div>
-      <div class="ingredient-item">
-        <div class="ingredient-icon"><img src="/images/aloe_vera.png" alt="Aloe Vera"></div>
-        <div class="ingredient-name">एलोवेरा (Aloe Vera)</div>
-        <div class="ingredient-latin">Aloe barbadensis</div>
-      </div>
+    <div class="ingredients-grid" id="ingredients-grid">
+  <div class="ingredient-item">
+    <div class="ingredient-icon"><img src="/images/saffron_thread.png" alt="Saffron Threads"></div>
+    <div class="ingredient-name">Saffron Threads</div>
+    <div class="ingredient-latin">Crocus sativus</div>
+  </div>
+  <div class="ingredient-item">
+    <div class="ingredient-icon"><img src="/images/sandalwood.png" alt="Sandalwood"></div>
+    <div class="ingredient-name">Sandalwood</div>
+    <div class="ingredient-latin">Santalum album</div>
+  </div>
+  <div class="ingredient-item">
+    <div class="ingredient-icon"><img src="/images/nagkesar.png" alt="Nagkeshar"></div>
+    <div class="ingredient-name">Nagkeshar</div>
+    <div class="ingredient-latin">Mesua ferrea</div>
+  </div>
+  <div class="ingredient-item ingredients-hidden">
+    <div class="ingredient-icon"><img src="/images/mulethi.png" alt="Yashtimadhu"></div>
+    <div class="ingredient-name">Yashtimadhu</div>
+    <div class="ingredient-latin">Glycyrrhiza glabra</div>
+  </div>
+  <div class="ingredient-item ingredients-hidden">
+    <div class="ingredient-icon"><img src="/images/rose_petal.png" alt="Rose Petals"></div>
+    <div class="ingredient-name">Rose Petals</div>
+    <div class="ingredient-latin">Rosa centifolia</div>
+  </div>
+  <div class="ingredient-item ingredients-hidden">
+    <div class="ingredient-icon"><img src="/images/orange_peel.png" alt="Orange Peel"></div>
+    <div class="ingredient-name">Orange Peel</div>
+    <div class="ingredient-latin">Citrus aurantium</div>
+  </div>
+  <div class="ingredient-item ingredients-hidden">
+    <div class="ingredient-icon"><img src="/images/aloe_vera.png" alt="Aloe Vera"></div>
+    <div class="ingredient-name">Aloe Vera</div>
+    <div class="ingredient-latin">Aloe barbadensis</div>
+  </div>
+</div>
+
+<div style="text-align:center;margin-top:2.5rem;">
+  <button class="ingredients-reveal-btn" id="ingredients-btn" onclick="revealIngredients()">
+    Discover All 13 Botanicals
+    <span style="margin-left:0.5rem;">↓</span>
+  </button>
+  <p style="font-size:0.78rem;color:var(--text-light);margin-top:0.75rem;letter-spacing:0.1em;text-transform:uppercase;">
+    Each herb handpicked for its unique skin benefit
+  </p>
+</div>
     </div>
 
   </div>
