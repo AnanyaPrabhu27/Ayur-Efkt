@@ -368,7 +368,7 @@ async function placeOrder() {
     const res = await fetch('/api/orders', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ customer, address, items: cart, total: window._checkoutGrand, paymentMethod })
+      body: JSON.stringify({ customer, address, items: cart, total: window._checkoutGrand, paymentMethod, timezone: Intl.DateTimeFormat().resolvedOptions().timeZone })
     });
     const data = await res.json();
     if (!res.ok) throw new Error(data.error || 'Failed to place order');

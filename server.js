@@ -30,6 +30,7 @@ const orderSchema = new mongoose.Schema({
   total:         Number,
   paymentMethod: String,
   status:        { type: String, default: 'confirmed' },
+  timezone:      { type: String, default: 'UTC' },
   createdAt:     { type: Date, default: Date.now }
 });
 
@@ -118,15 +119,15 @@ async function sendOrderEmails(order) {
       </div>
       <p style="color:#8a8a7a;font-size:0.8rem;text-align:center;margin-top:32px;line-height:1.8;">
         Questions? Reach us on <a href="https://www.instagram.com/ayur_efkt/" style="color:#c8862a;">@ayur_efkt</a><br>
-        Made with love in India 🌿
+        Made with love in India 😃
       </p>
     </div>`
   };
 
   const ownerHTML = `
     <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:32px;background:#f9f9f9;border-radius:12px;">
-      <h2 style="color:#2c3e2d;margin-top:0;">🛍️ New Order — ${order.id}</h2>
-      <p style="color:#666;font-size:0.85rem;">${new Date(order.createdAt).toLocaleString('en-IN')}</p>
+      <h2 style="color:#2c3e2d;margin-top:0;"> New Order — ${order.id}</h2>
+      <p style="color:#666;font-size:0.85rem;">${new Date(order.createdAt).toLocaleString('en-IN', { timeZone: order.timezone || 'UTC' })}</p>
       <table style="width:100%;border-collapse:collapse;margin:16px 0;background:white;border-radius:8px;overflow:hidden;">
         <tr style="background:#2c3e2d;color:white;">
           <th style="padding:10px 16px;text-align:left;">Product</th>
@@ -164,14 +165,16 @@ async function sendOrderEmails(order) {
       </div>
     </div>`;
 
-  await transporter.sendMail(customerMail);
+    console.log('Sending email to customer:', order.customer.email);
+    await transporter.sendMail(customerMail);
+    console.log('Customer email sent successfully');
 
   const notifyList = (process.env.NOTIFY_EMAILS || process.env.SHOP_EMAIL).split(',');
   for (const email of notifyList) {
     await transporter.sendMail({
       from: `"${process.env.SHOP_NAME}" <${process.env.SHOP_EMAIL}>`,
       to: email.trim(),
-      subject: `🛍️ New Order ${order.id} — ₹${order.total.toLocaleString('en-IN')}`,
+      subject: ` New Order ${order.id} — ₹${order.total.toLocaleString('en-IN')}`,
       html: ownerHTML
     });
   }
@@ -206,6 +209,7 @@ app.post('/api/orders', async (req, res) => {
       total,
       paymentMethod,
       status: 'confirmed',
+      timezone: req.body.timezone || 'UTC',
       createdAt: new Date()
     });
 
@@ -274,5 +278,5 @@ app.get('*', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`\n🌿 Ayur Efkt running at http://localhost:${PORT}\n`);
+  console.log(`\n Ayur Efkt running at http://localhost:${PORT}\n`);
 });
